@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "fluid_sieve:block/dense_sieve"
+    "model": "fluid_sieve:block/string_sieve"
   }
 }

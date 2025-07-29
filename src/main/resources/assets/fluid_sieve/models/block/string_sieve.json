@@ -1,5 +1,5 @@
 {
-	"parent": "block/block",
+	"parent": "minecraft:block/block",
 	"textures": {
 		"0": "fluid_sieve:block/string_sieve",
 		"particle": "fluid_sieve:block/string_sieve"
