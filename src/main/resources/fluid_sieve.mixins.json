@@ -3,7 +3,7 @@
   "package": "net.crioch.fluid_sieve.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "LootContextTypesMixin"
+    "LootContextParamSetsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
