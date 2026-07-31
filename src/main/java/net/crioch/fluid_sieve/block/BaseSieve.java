@@ -28,6 +28,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -162,7 +163,7 @@ public class BaseSieve extends Block implements SimpleWaterloggedBlock {
 
         net.minecraft.util.context.ContextMap.Builder builder = new net.minecraft.util.context.ContextMap.Builder()
                 .withParameter(LootContextParams.BLOCK_STATE, state)
-                .withParameter(LootContextParams.ORIGIN, pos.getCenter());
+                .withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(pos));
 
 
         // Get all Entities within the sieve
