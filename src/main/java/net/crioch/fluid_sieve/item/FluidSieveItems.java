@@ -2,7 +2,7 @@ package net.crioch.fluid_sieve.item;
 
 import net.crioch.fluid_sieve.FluidSieveMod;
 import net.crioch.fluid_sieve.block.FluidSieveBlocks;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -26,12 +26,12 @@ public class FluidSieveItems {
         STRING_MESH = register("string_mesh", new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FluidSieveMod.MOD_ID, "string_mesh")))));
         DENSE_MESH = register("dense_mesh", new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FluidSieveMod.MOD_ID, "dense_mesh")))));
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> {
             entries.accept(STRING_SIEVE);
             entries.accept(DENSE_SIEVE);
         });
 
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(entries -> {
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(entries -> {
             entries.accept(STRING_MESH);
             entries.accept(DENSE_MESH);
         });
